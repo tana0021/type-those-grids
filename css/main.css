@@ -1,0 +1,45 @@
+body {
+    font-family: 'Merriweather';font-size: 22px;
+    font-size: 1.5rem;
+}
+
+html {
+  box-sizing: 1fr;
+
+}
+
+.titles {
+  font-size: 1.8rem;
+
+}
+ ul { list-style-type: none;}
+.temple {grid-template-columns: repeat(3, 1fr);
+}
+.banner {
+  display: grid;
+  grid-template-rows: 1fr 4em;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+banner img{
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+h1 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+main {
+  grid-template-rows: 1fr 4em;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+dl { display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+ }
+
+.section { display: grid;
+  grid-template-columns: repeat(3, 1fr);}
