@@ -1,45 +1,119 @@
-body {
-    font-family: 'Merriweather';font-size: 22px;
-    font-size: 1.5rem;
-}
-
 html {
-  box-sizing: 1fr;
-
+  box-sizing: border-box;
+  line-height: 1.5;
+  font-family: Merriweather, serif;
 }
 
-.titles {
-  font-size: 1.8rem;
+* {
+  box-sizing: inherit;
+}
 
+body {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "banner banner banner"
+    "main main main";
 }
- ul { list-style-type: none;}
-.temple {grid-template-columns: repeat(3, 1fr);
-}
+
+/* ----------------header------------------------- */
+
 .banner {
   display: grid;
-  grid-template-rows: 1fr 4em;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-banner img{
-  grid-column: 1/-1;
-  grid-row: 1/-1;
-}
-
-h1 {
-  grid-column: 1;
-  grid-row: 2;
-}
-
-main {
-  grid-template-rows: 1fr 4em;
   grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 130px 1fr;
+  gap: .75rem;
+  grid-area: header;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
 }
 
-dl { display: grid;
+.banner h1 {
+  font-style: italic;
+  grid-area: header;
+  grid-column: 1 / 4;
+  grid-row: 1 /2;
+  font-size: 1.8rem;
+}
+
+.banner img {
+  grid-area: header;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  width: 100%;
+  z-index: -2;
+}
+
+.banner h2 {
+  font-style: italic;
+  grid-area: header;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  align-self: end;
+  color: white;
+  margin: 1rem;
+  margin-bottom: 5rem;
+  font-size: 1.5rem;
+}
+
+.banner p {
+  grid-area: header;
+  grid-column: 1 / 4;
+  grid-row: 2 / 3;
+  align-self: end;
+  color: white;
+  margin: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+}
+
+/* ----------------main------------------------- */
+
+.main {
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: .75rem;
+  grid-row: 2 / 3;
+  margin: 0 auto;
+}
 
- }
+section #temple {
+  margin: 0;
+  grid-area: main;
+  grid-column: 1/2;
+  grid-row: 1 / 2;
+}
 
-.section { display: grid;
-  grid-template-columns: repeat(3, 1fr);}
+.title1 {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+#colossus {
+  align-self: start;
+  grid-area: main;
+  grid-column: 2/3;
+  grid-row: 1 / 2;
+}
+
+.title2 {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+#gardens {
+  width: 100%;
+  grid-area: main;
+  grid-column: 3/4;
+  grid-row: 1 / 2;
+}
+
+.title3 {
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+section {
+  font-size: 1.5rem;
+}
